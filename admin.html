@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin</title>
+    
+  </head>
+  <body>
+    <h1 style="color: blue  ; margin-left: 10px;"><b>User Details</b></h1><br/>
+    <div id="userDetails"></div>
+
+    <script>
+      // Fetch user details from the backend
+      fetch("/admin/users")
+        .then((response) => response.json())
+        .then((users) => {
+          const userDetailsDiv = document.getElementById("userDetails");
+          users.forEach((user) => {
+            const userDiv = document.createElement("div");
+            userDiv.innerHTML = `<h3 style=" margin-left: 10px;">Name: ${user.name}</h3>
+                               <h3 style=" margin-left: 10px;">Email: ${user.email}</h3>
+                               <h3 style=" margin-left: 10px;">Passwod: ${user.password}</h3> <br/><br/>    `;
+            userDetailsDiv.appendChild(userDiv);
+          });
+        })
+        .catch((error) =>
+          console.error("Failed to fetch user details:", error)
+        );
+    </script>
+  </body>
+</html>

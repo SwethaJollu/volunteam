@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <style>
+      body {
+        background-color: #f8f9fa;
+        font-family: Arial, sans-serif;
+        background-image: url("log.jpeg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center top 30px; 
+      }
+
+      #head {
+        text-align: center;
+        font-size: 36px;
+        color: green;
+        margin-top: 50px;
+      }
+
+      #main-holder {
+        margin-top: 30px;
+        width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px); /* Add blur effect */
+        background-color: rgba(
+          255,
+          255,
+          255,
+          0.5
+        ); /* Add a semi-transparent background */
+         display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+
+      #main-holder h1 {
+        text-align: center;
+        color: #343a40;
+      }
+
+      .form-container {
+        padding: 20px;
+      }
+
+      input[type="email"],
+      input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ced4da;
+        border-radius: 1px;
+      }
+
+      #submit {
+        width: 100%;
+        background-color: #007bff;
+        color: #fff;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      #submit:hover {
+        background-color: #0056b3;
+      }
+
+      a {
+        color: #007bff;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="head">
+      <h1><b>Get Started!!!</b></h1>
+    </div>
+    <main id="main-holder">
+      <h1><b>Login</b></h1>
+      <div class="form-container">
+        <form action="/login" method="post">
+          <div class="form-group">
+            <label for="email"><b>Email Address:</b></label>
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              placeholder="Enter Email"
+              name="email"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="password"><b>Password:</b></label>
+            <input
+              type="password"
+              class="form-control"
+              id="password"
+              placeholder="Password"
+              name="password"
+              required
+            />
+          </div>
+          <button type="submit" class="btn btn-primary" id="submit">
+            <b>Submit</b>
+          </button>
+        </form>
+      </div>
+      <div class="text-center">
+        <a href="register.html"
+          ><b>Don't have an account? Register here...</b></a
+        >
+      </div>
+    </main>
+  </body>
+</html>
